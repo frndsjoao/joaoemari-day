@@ -1,0 +1,82 @@
+.informationsContainer {
+  width: 100vw;
+  height: 100%;
+  padding: 40px 0 30px;
+}
+
+.informationsWrapper {
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.informationsMap {
+  width: 100%;
+  height: 300px;
+  background-color: #333;
+}
+
+.informationsContent {
+  margin-top: 20px;
+  padding: 0 15px;
+
+  font-size: 15px;
+  text-align: justify;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 600px) {
+  .informationsMap {
+    height: 350px;
+  }
+
+  .informationsContent {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .informationsContainer {
+    padding: 20px 0;
+  }
+
+  .informationsWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .informationsMap {
+    flex: 1;
+  }
+
+  .informationsContent {
+    flex: 1; 
+    padding: 0;
+
+    p {
+      padding: 0 20px;
+      width: 100%;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .informationsContainer {
+    width: 100%;
+    border-top: 1px solid var(--green-300);
+    padding: 40px 0;
+  }
+
+  .informationsWrapper {
+    width: 1150px;
+    margin: 0 auto;
+  }
+}
+

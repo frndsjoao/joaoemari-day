@@ -1,0 +1,43 @@
+.verseContainer {
+  width: 100vw;
+  height: 100%;
+  background-color: var(--green-700);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verseWrapper {
+  padding: 50px 15px 40px;
+  color: var(--white);
+  text-align: justify;
+  
+  p {
+    line-height: 1.3rem;
+    font-size: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-weight: 300;
+  }
+
+  span {
+    display: flex;
+    justify-content: right;
+    font-style: italic;
+    margin-right: 2px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .verseWrapper {
+    padding: 60px 20px 50px
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .verseWrapper {
+    width: 720px;
+    padding: 50px 0 40px;
+  }
+}

@@ -1,0 +1,128 @@
+.headerContainer {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 38px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  svg {
+    width: 25px;
+    height: 25px;
+
+    color: var(--sand-300);
+    cursor: pointer;
+  }
+}
+
+.showMenu {
+  width: 180px;
+  height: 220px;
+  padding: 50px 15px;
+
+  animation-name: openMenu;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+
+  overflow: hidden;
+  
+  svg {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 999;
+  }
+
+}
+
+.linkWrapper {
+  width: 180px;
+  height: 220px;
+  padding-top: 35px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  opacity: 1;
+
+  animation-name: openMenuLinks;
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+
+  a {
+    text-align: right;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 300;
+    margin: 12px 0;
+  }
+}
+
+.divider {
+  width: 70%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 0 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  .headerContainer {
+    top: 25px;
+    right: 20px;
+    width: 520px;
+    height: 60px;
+    padding: 0 10px;
+
+    svg {
+      display: none;
+    }
+  }
+
+  .linkWrapper {
+    width: 520px;
+    height: 60px;
+    padding-top: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 1;
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .divider {
+    width: 3px;
+    height: 70%;
+    margin: 0 15px;
+  }
+}
+
+
+@keyframes openMenu {
+  0% { width: 40px; height: 38px; padding: 0;}
+  100% { width: 180px; height: 220px; padding: 50px 15px;}
+}
+
+@keyframes openMenuLinks {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media screen and (min-width: 1400px) {
+  .headerContainer {
+    right: 100px;
+  }
+}

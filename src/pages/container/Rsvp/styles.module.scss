@@ -1,0 +1,131 @@
+.rsvpContainer {
+  width: 100vw;
+  height: 100%;
+  background-color: var(--white);
+  padding: 30px 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    color: var(--green-700);
+    font-family: var(--font-taviraj);
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: justify;
+    padding: 0 10px;
+    margin-bottom: 15px;
+  }
+}
+
+.rsvpForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  input, textarea {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    margin: 10px 0 20px;
+
+    border: none;
+    border-bottom: 1px solid var(--green-700);
+    border-radius: 2px;
+    outline: none;
+
+    font-size: 12px;
+    font-family: var(--font-manrope);
+    letter-spacing: 0.5px;
+  }
+
+  textarea {
+    min-height: 85px;
+    max-height: 120px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  button {
+    width: 160px;
+    height: 45px;
+
+    background-color: rgba(122, 130, 98, 0.6);
+    border: none;
+    border-radius: 2px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    color: var(--white);
+    font-family: var(--font-manrope);
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 14px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba(122, 130, 98, 0.7);
+      letter-spacing: 3.5px;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .rsvpContainer {
+    padding: 40px 20px 30px;
+  }
+
+  .rsvpForm input {
+    width: 80%;
+  }
+
+  .rsvpForm textarea {
+    max-width: 80%;
+    min-width: 80%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .rsvpContainer {
+    padding: 50px 0 30px;
+
+    p {
+      width: 720px;
+      text-align: center;
+    }
+  }
+
+  .rsvpForm {
+    width: 700px;
+
+    input {
+      width: 85%;
+    }
+
+    textarea {
+      max-width: 85%;
+      min-width: 85%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .rsvpContainer {
+    padding: 60px 0;
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+  }
+}

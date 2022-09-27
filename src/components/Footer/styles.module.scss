@@ -1,0 +1,36 @@
+.footerContainer {
+  width: 100%;
+  margin: 10px 0;
+  padding: 20px 10px 0;
+  border-top: 1px solid var(--green-300);
+
+  font-size: 11px;
+  font-weight: 200;
+  font-family: var(--font-manrope);
+  color: #555;
+
+  p {
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  a {
+    font-weight: 200;
+    transition: all 0.3s ease;
+
+    &:hover {
+      font-weight: 500;
+      letter-spacing: 0.6px;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .footerContainer {
+    padding: 12px 0 6px;
+
+    p {
+      white-space: initial;
+    }
+  }
+}
