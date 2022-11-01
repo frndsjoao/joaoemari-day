@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import CamicadoImg from '../../../assets/listings/camicado.png'
-import MagaluImg from '../../../assets/listings/magalu.png'
 import PixImg from '../../../assets/listings/pix.png'
-import TokstokImg from '../../../assets/listings/tokstok.png'
+import FastshopImg from '../../../assets/listings/fastshop.png'
+import LavilleImg from '../../../assets/listings/laville.png'
 
 import ListingItem from '../../../components/ListingIntem'
 import styles from './styles.module.scss'
@@ -23,9 +23,9 @@ export default function Listing() {
         <h2>Lista de presentes</h2>
 
         <div className={styles.listingContent} data-aos="zoom-in">
-          <ListingItem name='Camicado' image={CamicadoImg} description="Clique aqui" url='https://joaoemari.day' />
-          <ListingItem name='Magalu' image={MagaluImg} description="Clique aqui" url='https://joaoemari.day' />
-          <ListingItem name='Tok-stok' image={TokstokImg} description="Clique aqui" url='https://joaoemari.day' />
+          <ListingItem name='Camicado' image={CamicadoImg} description="Clique aqui" url='https://lista.camicado.com.br/joaoemari' />
+          <ListingItem name='Fastshop' image={FastshopImg} description="Clique aqui" url='https://listadecasamento.fastshop.com.br/lista/mariejoao-160423' />
+          <ListingItem name='La-ville' image={LavilleImg} description="Clique aqui" url='https://presentes.lavillecasa.com.br/lista/joaoemari' />
           <ListingItem name='Pix' image={PixImg} description='joaoemari@gmail.com' />
         </div>
       </div>

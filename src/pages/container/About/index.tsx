@@ -1,19 +1,20 @@
 import Image from 'next/image'
-import BgImg from '../../../assets/RAF_5853.jpg'
+import BgImg from '../../../assets/IMG_6534.jpg'
 
 import styles from './styles.module.scss'
 
 export default function About() {
-
   return (
     <main id="about" className={styles.aboutContainer}>
       <div className={styles.aboutWrapper}>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <div className={styles.aboutContent}>
+          <p>
+            Sonhamos e oramos por esse dia e estamos muito felizes por poder compartilhar esse momento com vocês.
+          </p>
+          <p>
+            Nesse site iremos compartilhas algumas informações importantes sobre o casamento enquanto aguardamos a chegada do grande dia.
+          </p>
+        </div>
 
         <div className={styles.aboutImg}>
           <Image

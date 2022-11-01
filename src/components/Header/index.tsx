@@ -12,10 +12,7 @@ export default function Header() {
     if (window.innerWidth > 599) {
       setMenuOpen(true)
     }
-  }, [window.innerWidth])
-
-
-  console.log(menuOpen)
+  }, [])
 
   return (
     <div className={`${styles.headerContainer} ${menuOpen && styles.showMenu}`}>

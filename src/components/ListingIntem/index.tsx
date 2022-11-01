@@ -15,7 +15,7 @@ export default function ListingItem({ name, image, url, description }: ItemProps
     <div id={name} className={`${styles.itemContainer} ${url && styles.hover}`}>
       {url ? (
         <>
-          <a href={url}>
+          <a href={url} target="_blank" rel="noreferrer">
             <div className={styles.itemImg}>
               <Image
                 src={image}

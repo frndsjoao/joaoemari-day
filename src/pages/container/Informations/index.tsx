@@ -11,11 +11,10 @@ export default function Informations() {
         </div>
 
         <div className={styles.informationsContent}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-          </p>
+          <p>Pedimos que se programe com antecedência para chegar a tempo e não atrasar, por favor.</p>
+          <p>O local não possui estacionamento, porém, por ser tratar de um bairro residencial é possível estacionar nas ruas ao redor.</p>
+          <p>A cerimônia e a festa serão no mesmo local, que possui uma parte em gramado. Por isso, opte por um calçado confortável.</p>
+          {/* <p style={{ textAlign: 'center', fontWeight: 'bold', marginTop: 30 }}>Aproveite, registre os momentos, dê risadas. A presença de vocês é importante pra nós!</p> */}
         </div>
       </div>
     </main>

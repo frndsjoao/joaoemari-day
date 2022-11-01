@@ -11,6 +11,8 @@ export default function Rsvp() {
   const [guests, setGuests] = useState('')
   const [loading, setLoading] = useState(false)
 
+  const [rsvp] = useState(false)
+
   const form = useRef()
 
   async function handleSubmit(event: FormEvent) {
@@ -70,42 +72,49 @@ export default function Rsvp() {
 
   return (
     <main id="rsvp" className={styles.rsvpContainer}>
-      <h2>Confirme sua presença</h2>
-      <p>
-        Sua confirmação nos ajudará a montar a lista de convidados.
-        É <b>indispensável</b> a entrega do convite individual na entrada do
-        local.
-      </p>
+      {rsvp ? (
+        <>
+          <h2>Confirme sua presença</h2>
+          <p>
+            Sua confirmação nos ajudará a garantir a lista de convidados.
+            É <b>indispensável</b> a entrega do convite individual na entrada do
+            local.
+          </p>
 
-      <form ref={form} className={styles.rsvpForm} onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder='Seu nome e sobrenome'
-          value={name}
-          name="user_name"
-          onChange={({ target }) => setName(target.value)}
-        />
-        <input
-          type="text"
-          placeholder='Seu telefone'
-          value={phone}
-          name="user_phone"
-          onChange={({ target }) => setPhone(formatToPhone(target.value))}
-          maxLength={16}
-        />
-        <textarea
-          placeholder='Quem mais da sua família virá? (nome e sobrenome)'
-          value={guests}
-          name="user_guests"
-          onChange={({ target }) => setGuests(target.value)}
-        />
+          <form ref={form} className={styles.rsvpForm} onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder='Seu nome e sobrenome'
+              value={name}
+              name="user_name"
+              onChange={({ target }) => setName(target.value)}
+            />
+            <input
+              type="text"
+              placeholder='Seu telefone'
+              value={phone}
+              name="user_phone"
+              onChange={({ target }) => setPhone(formatToPhone(target.value))}
+              maxLength={16}
+            />
+            <textarea
+              placeholder='Quem mais da sua família virá? (nome e sobrenome)'
+              value={guests}
+              name="user_guests"
+              onChange={({ target }) => setGuests(target.value)}
+            />
 
-        <button type='submit' disabled={loading}>
-          {loading ? (
-            <Loaders rsvpConfirmation />
-          ) : 'Confirmar'}
-        </button>
-      </form>
+            <button type='submit' disabled={loading}>
+              {loading ? (
+                <Loaders rsvpConfirmation />
+              ) : 'Confirmar'}
+            </button>
+          </form>
+        </>
+      ) : (
+        <h2>Em breve você poderá confirmar sua presença aqui ;)</h2>
+      )}
+
     </main>
   )
 }

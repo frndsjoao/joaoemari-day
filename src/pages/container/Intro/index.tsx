@@ -1,11 +1,14 @@
 import Image from 'next/image'
-import BgImg from '../../../assets/RAF_5811.jpg'
+import BgImg from '../../../assets/IMG_6974.jpg'
 import { IoIosArrowDown } from 'react-icons/io'
 
 import styles from './styles.module.scss'
 import { Link } from 'react-scroll'
+import { useState } from 'react'
 
 export default function Intro() {
+  const [rsvp] = useState(false)
+
   return (
     <main id="intro" className={styles.introContainer}>
       <div className={styles.introImg}>
@@ -22,12 +25,14 @@ export default function Intro() {
 
       <div className={styles.introWrapper}>
         <div className={styles.introContent}>
-          <h1>João <span>&</span> Mari</h1>
+          <h1>Mari <span>&</span> João</h1>
           <h2>16  de Abril de 2023</h2>
 
-          <Link to="rsvp" smooth>
-            <button>RSVP</button>
-          </Link>
+          {rsvp && (
+            <Link to="rsvp" smooth>
+              <button>RSVP</button>
+            </Link>
+          )}
         </div>
       </div>
 

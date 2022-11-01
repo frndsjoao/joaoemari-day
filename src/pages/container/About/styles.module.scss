@@ -24,6 +24,16 @@
   }
 }
 
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  p {
+    margin: 15px 0;
+  }
+}
+
 .aboutImg {
   position: relative;
   width: 100%;
