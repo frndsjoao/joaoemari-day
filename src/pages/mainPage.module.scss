@@ -17,3 +17,28 @@
   justify-content: center;
   align-items: center;
 }
+
+.maintenance {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: var(--sand-300);
+  padding: 0 10px;
+
+  p {
+    font-size: 1.15rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  strong {
+    font-family: var(--font-taviraj);
+    font-size: 1.5rem;
+    color: var(--green-900);
+    margin-top: 1rem;
+  }
+}

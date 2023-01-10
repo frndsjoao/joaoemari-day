@@ -19,7 +19,7 @@ export default function Home() {
         <title>Mari &amp; João</title>
       </Head>
 
-      <main className={styles.mainContainer}>
+      {/* <main className={styles.mainContainer}>
         <Header />
 
         <Intro />
@@ -30,6 +30,13 @@ export default function Home() {
         <Informations />
 
         <Footer />
+      </main> */}
+
+      <main className={styles.maintenance}>
+        <p>Estamos atualizando o site para melhorar a experiência de vocês.</p>
+        <p>Pedimos que volte amanhã ❤️</p>
+
+        <strong>Mari & João</strong>
       </main>
     </>
   )
