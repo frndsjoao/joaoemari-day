@@ -11,7 +11,7 @@ export default function Rsvp() {
   const [guests, setGuests] = useState('')
   const [loading, setLoading] = useState(false)
 
-  const [rsvp] = useState(false)
+  const [rsvp] = useState(true)
 
   const form = useRef()
 
@@ -34,10 +34,10 @@ export default function Rsvp() {
     try {
       setLoading(true)
       await emailjs.sendForm(
-        'service_947k9dj',
-        'template_f1im6w8',
+        process.env.NEXT_PUBLIC_MAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_MAILJS_TEMPLATE_ID,
         form.current,
-        'TYCx1Ku8CkRbNjkBL'
+        process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY
       )
         .then((result) => {
           console.log(result.text);

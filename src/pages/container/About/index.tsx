@@ -12,7 +12,7 @@ export default function About() {
             Sonhamos e oramos por esse dia e estamos muito felizes por poder compartilhar esse momento com vocês.
           </p>
           <p>
-            Nesse site iremos compartilhas algumas informações importantes sobre o casamento enquanto aguardamos a chegada do grande dia.
+            Nesse site iremos compartilhar algumas informações importantes sobre o casamento enquanto aguardamos a chegada do grande dia.
           </p>
         </div>
 
